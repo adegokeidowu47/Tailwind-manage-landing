@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+@theme {
+  /* --breaking-point-*: 'initial'; */
+  --breaking-point-sm: '480px';
+  --breaking-point-md: '768px';
+  --breaking-point-lg: '976px';
+  --breaking-point-xl: '1440px';
+  --color-brightRed: 'hsl(12,88%, 59%)';
+  --color-brightRedLight: 'hsl(12,88%, 69%)';
+  --color-brightRedSupLight: 'hsl(12,88%, 95%)';
+  --color-darkBlue: 'hsl(228,39%, 23%)';
+  --color-darkGrayishBlue: 'hsl(227, 12%, 61%)';
+  --color-veryDarkBlue: 'hsl(233,12%, 13%)';
+  --color-veryPaleRed: 'hsl(13,100%, 96%)';
+  --color-veryLightGray: 'hsl(0, 0%, 98%)';
+}
+
+body {
+  background-image: url('../img/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 900px;
+  background-position: 90% -25%;
+  background-color: hsl(0, 0%, 100%);
+  scroll-behavior: smooth;
+}
+
+#cta {
+  background-image: url('../img/bg-simplify-section-desktop.svg');
+  background-repeat: no-repeat;
+}
+
+#menu {
+  box-shadow: 0px 0px 3000px 900px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1000px) {
+  body {
+    background-position: 150% -5%;
+    background-size: 700px;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    background-position: 50px 0px;
+    background-size: 60px;
+  }
+  #cta {
+    background-image: url('../img/bg-simplify-section-mobile.svg');
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    background-position: 50px -50px;
+    background-size: 500px;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s;
+  position: relative;
+}
+#testimonials {
+  transition: all 0.3s ease-in;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: black;
+  transform: rotate(0);
+  transition: all 0.3s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+/* a:hover {
+  color: hsl(227, 12%, 61%);
+} */
