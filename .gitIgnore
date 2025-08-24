@@ -1,4 +1,4 @@
 node_modules
-vscode
+.vscode
 trash.js
 tailwind.config.js
